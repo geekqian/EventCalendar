@@ -12,24 +12,31 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * @author david
- *         描述：所有Activity基类
- *         更新者：
- *         创建时间：2018/03/02
- *         更新时间：
+ * Created by david
+ * 描述：所有Activity基类
+ * 更新者：
+ * 创建时间：2018/03/02
+ * 更新时间：
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    /**
+     * 描述：ButterKnife 绑定对象，可用于解绑
+     */
     protected Unbinder mUnbinder;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         if (initArgs(getIntent().getExtras())) {
-            initWidget();
+            //初始化窗体
             initWindow();
+            //初始化组件
+            initWidget();
+            //初始化数据
             initData();
         } else {
+            //关闭界面
             finish();
         }
     }

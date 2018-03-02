@@ -12,20 +12,27 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * @author david
- *         描述：所有Fragment基类
- *         更新者：
- *         创建时间：2018/03/02
- *         更新时间：
+ * Created by david
+ * 描述：所有Fragment基类
+ * 更新者：
+ * 创建时间：2018/03/02
+ * 更新时间：
  */
 public abstract class BaseFragment extends Fragment {
 
+    /**
+     * 描述：根布局View
+     */
     protected View mRoot;
+    /**
+     * 描述：ButterKnife 绑定对象，可用于解绑
+     */
     protected Unbinder mUnbinder;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        //初始化窗体
         initWindow();
     }
 
@@ -33,11 +40,14 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mRoot == null) {
-            int id = getRootViewID();
-            View root = inflater.inflate(id, container);
-            initWeight();
+            //初始化跟布局，将XML转化成View
+            View root = inflater.inflate(getRootViewID(), container);
+            //赋值给成员的跟布局View
             this.mRoot = root;
+            //初始化组件
+            initWeight();
         } else if (mRoot.getParent() != null) {
+            //移除父控件里的rootView
             ((ViewGroup) mRoot.getParent()).removeView(mRoot);
         }
         return mRoot;
@@ -46,6 +56,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //初始化数据
         initData();
     }
 
