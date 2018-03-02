@@ -13,10 +13,11 @@ import butterknife.Unbinder;
 
 /**
  * @author david
- *         20180302
- * @deprecated Activity基类
+ *         描述：所有Activity基类
+ *         更新者：
+ *         创建时间：2018/03/02
+ *         更新时间：
  */
-
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected Unbinder mUnbinder;

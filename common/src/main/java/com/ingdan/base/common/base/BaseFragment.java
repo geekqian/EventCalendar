@@ -13,10 +13,11 @@ import butterknife.Unbinder;
 
 /**
  * @author david
- *         20180302
- * @deprecated 所有fragment的基类
+ *         描述：所有Fragment基类
+ *         更新者：
+ *         创建时间：2018/03/02
+ *         更新时间：
  */
-
 public abstract class BaseFragment extends Fragment {
 
     protected View mRoot;
