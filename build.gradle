@@ -28,7 +28,8 @@ task clean(type: Delete) {
 }
 
 ext {
+    //v7包依赖版本号
     supportVersion = '26.1.0'
-    constraintVersion = '1.0.2'
+    //黄油刀依赖版本号
     butterknifeVersion = '8.5.1'
 }
