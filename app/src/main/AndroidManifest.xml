@@ -3,6 +3,7 @@
           package="com.ingdan.eventcalendar">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".config.MyApplication"
         android:allowBackup="true"

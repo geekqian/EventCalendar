@@ -29,7 +29,7 @@ task clean(type: Delete) {
 
 ext {
     //v7包依赖版本号
-    supportVersion = '26.1.0'
+    supportVersion = '27.1.0'
     //黄油刀依赖版本号
     butterknifeVersion = '8.8.1'
 }

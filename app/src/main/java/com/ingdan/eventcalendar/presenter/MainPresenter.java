@@ -1,12 +1,13 @@
 package com.ingdan.eventcalendar.presenter;
 
 import com.ingdan.eventcalendar.MainActivity;
-import com.ingdan.eventcalendar.api.DialogSubscriber;
+import com.ingdan.eventcalendar.api.ApiService;
+import com.ingdan.eventcalendar.api.HttpObserver;
 import com.ingdan.eventcalendar.model.WeatherBean;
 
 import java.util.HashMap;
 
-import rx.Observable;
+import io.reactivex.disposables.Disposable;
 
 /**
  * Created by geekqian on 2018/3/19.
@@ -16,7 +17,7 @@ import rx.Observable;
  * 更新描述:
  */
 
-public class MainPresenter extends BasePresenter{
+public class MainPresenter{
 
     private MainActivity mActivity;
 
@@ -31,14 +32,22 @@ public class MainPresenter extends BasePresenter{
     public void getWeather(String city){
         HashMap<String, String> map = new HashMap<>();
         map.put("city", city);
-        Observable observable = mApi.getWeather(city)
-                .map(new HttpResultFunc<WeatherBean>());
-        toSubscribe(observable, new DialogSubscriber<WeatherBean>(mActivity) {
 
+        ApiService.getApiService().getWeather(new HttpObserver<WeatherBean>() {
             @Override
-            public void onNext(WeatherBean weatherBean) {
+            public void onSuccess(WeatherBean weatherBean) {
                 mActivity.showWeather(weatherBean);
             }
-        });
+
+            @Override
+            public void onFinished() {
+
+            }
+
+            @Override
+            public void getDisposable(Disposable disposable) {
+
+            }
+        }, map);
     }
 }

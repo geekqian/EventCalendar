@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
         List<WeatherBean.ForecastBean> forecast = weatherBean.getForecast();
         // 空气质量指数
         String aqi = weatherBean.getAqi();
-        mTvWeather.setText(city + " 当前温度：" + wendu + " 温馨提示：" + ganmao);
+        mTvWeather.setText(city + " 当前温度：" + wendu + "° \r\n 温馨提示：" + ganmao);
     }
 
 
