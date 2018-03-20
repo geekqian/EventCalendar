@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.utils;
+package com.ingdan.base.common.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

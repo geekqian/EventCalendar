@@ -10,11 +10,11 @@ package com.ingdan.eventcalendar.config;
 
 public interface Config {
 
-    // log 开关
-    boolean LOG_SWITCH = true;
-    // 默认的log tag
-    String LOG_TAG = "MyApp";
-    // 自定义请求头
-    String HEADER_KEY = "";
-    String HEADER = "";
+//    // log 开关
+//    boolean LOG_SWITCH = true;
+//    // 默认的log tag
+//    String LOG_TAG = "MyApp";
+//    // 自定义请求头
+//    String HEADER_KEY = "";
+//    String HEADER = "";
 }

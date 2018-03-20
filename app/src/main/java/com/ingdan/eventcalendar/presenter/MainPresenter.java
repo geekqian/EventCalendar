@@ -2,7 +2,7 @@ package com.ingdan.eventcalendar.presenter;
 
 import com.ingdan.eventcalendar.MainActivity;
 import com.ingdan.eventcalendar.api.ApiService;
-import com.ingdan.eventcalendar.api.HttpObserver;
+import com.ingdan.base.common.api.HttpObserver;
 import com.ingdan.eventcalendar.model.WeatherBean;
 
 import java.util.HashMap;

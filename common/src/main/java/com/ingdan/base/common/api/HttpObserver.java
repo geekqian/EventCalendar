@@ -1,8 +1,8 @@
-package com.ingdan.eventcalendar.api;
+package com.ingdan.base.common.api;
 
-import com.ingdan.eventcalendar.config.MyApplication;
-import com.ingdan.eventcalendar.utils.CenterToast;
-import com.ingdan.eventcalendar.utils.NetUtils;
+import com.ingdan.base.common.base.BaseApplication;
+import com.ingdan.base.common.utils.CenterToast;
+import com.ingdan.base.common.utils.NetUtils;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -40,7 +40,7 @@ public abstract class HttpObserver<R> implements Observer<R> {
      */
     @Override
     public void onNext(R r) {
-        if (!NetUtils.isNetworkAvailable(MyApplication.getContext())) {
+        if (!NetUtils.isNetworkAvailable(BaseApplication.getContext())) {
             if (mDisposable!=null && !mDisposable.isDisposed()){
                 mDisposable.dispose();
             }

@@ -1,8 +1,6 @@
 package com.ingdan.eventcalendar.config;
 
-import android.annotation.SuppressLint;
-import android.app.Application;
-import android.content.Context;
+import com.ingdan.base.common.base.BaseApplication;
 
 /**
  * Created by geekqian on 2018/3/18.
@@ -12,18 +10,10 @@ import android.content.Context;
  * 更新描述:
  */
 
-public class MyApplication extends Application {
-
-    public static Context getContext() {
-        return mContext;
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    private static Context mContext;
+public class MyApplication extends BaseApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mContext = this;
     }
 }

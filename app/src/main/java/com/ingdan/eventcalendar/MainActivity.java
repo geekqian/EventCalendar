@@ -3,6 +3,7 @@ package com.ingdan.eventcalendar;
 import android.widget.TextView;
 
 import com.ingdan.base.common.base.BaseActivity;
+import com.ingdan.base.common.utils.LocationUtils;
 import com.ingdan.eventcalendar.model.WeatherBean;
 import com.ingdan.eventcalendar.presenter.MainPresenter;
 
@@ -37,6 +38,7 @@ public class MainActivity extends BaseActivity {
      */
     public void getLocation() {
         mCity = "深圳";
+        LocationUtils.getLocation();
     }
 
     @OnClick(R.id.bt_getData)

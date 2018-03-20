@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EventCalendar.iml" filepath="$PROJECT_DIR$/EventCalendar.iml" />
+      <module fileurl="file://D:\workSpace\EventCalendar\EventCalendar.iml" filepath="D:\workSpace\EventCalendar\EventCalendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\workSpace\EventCalendar\app\app.iml" filepath="D:\workSpace\EventCalendar\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://D:\workSpace\EventCalendar\common\common.iml" filepath="D:\workSpace\EventCalendar\common\common.iml" />
     </modules>
   </component>
 </project>

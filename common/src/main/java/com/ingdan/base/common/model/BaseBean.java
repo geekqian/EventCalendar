@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.model;
+package com.ingdan.base.common.model;
 
 /**
  * Created by geekqian on 2018/3/19.

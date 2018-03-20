@@ -1,8 +1,8 @@
-package com.ingdan.eventcalendar.utils;
+package com.ingdan.base.common.utils;
 
 import android.util.Log;
 
-import com.ingdan.eventcalendar.config.Config;
+import com.ingdan.base.common.config.BaseConfig;
 
 
 /**
@@ -14,14 +14,14 @@ import com.ingdan.eventcalendar.config.Config;
  */
 public class LogUtils {
 	//状态为false不打印.
-	private static boolean isOut = Config.LOG_SWITCH;
+	private static boolean isOut = BaseConfig.LOG_SWITCH;
 
 	/** 默认logcat的过滤关键词为"LOG"
 	 * @param obj
 	 */
 	public static void print(Object obj) {
 		if (isOut)
-			Log.d(Config.LOG_TAG, obj == null ? "null" : obj.toString());
+			Log.d(BaseConfig.LOG_TAG, obj == null ? "null" : obj.toString());
 	}
 
 	/** 自定义TAG
@@ -39,7 +39,7 @@ public class LogUtils {
 	 */
 	public static void print(String msg, Throwable t) {
 		if (isOut)
-			Log.d(Config.LOG_TAG, msg+"", t);
+			Log.d(BaseConfig.LOG_TAG, msg+"", t);
 	}
 
 }

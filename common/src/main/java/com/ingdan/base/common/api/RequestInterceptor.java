@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.api;
+package com.ingdan.base.common.api;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import okhttp3.Response;
 
 /**
  * Created by geekqian on 2018/3/19.
- * 描述:
+ * 描述: 请求拦截器, 在此类中可定制请求头以及追加统一参数
  * 更新者:
  * 更新时间:
  * 更新描述:

@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.api;
+package com.ingdan.base.common.api;
 
 import java.io.IOException;
 

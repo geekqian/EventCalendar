@@ -1,13 +1,14 @@
-package com.ingdan.eventcalendar.api;
+package com.ingdan.base.common.api;
 
-import com.ingdan.eventcalendar.model.BaseBean;
-import com.ingdan.eventcalendar.utils.CenterToast;
+
+import com.ingdan.base.common.model.BaseBean;
+import com.ingdan.base.common.utils.CenterToast;
 
 import io.reactivex.functions.Function;
 
 /**
  * Created by geekqian on 2018/3/19.
- * 描述:
+ * 描述: 模型基类
  * 更新者:
  * 更新时间:
  * 更新描述:
