@@ -1,10 +1,10 @@
-package com.ingdan.eventcalendar.model.model;
+package com.ingdan.eventcalendar.model.model.weather;
 
 import com.ingdan.base.common.api.HttpObserver;
 import com.ingdan.base.common.base.model.BaseModel;
 import com.ingdan.base.common.base.presenter.IPresenter;
 import com.ingdan.eventcalendar.api.ApiService;
-import com.ingdan.eventcalendar.model.bean.WeatherBean;
+import com.ingdan.eventcalendar.model.bean.weather.WeatherBean;
 
 import java.util.Map;
 

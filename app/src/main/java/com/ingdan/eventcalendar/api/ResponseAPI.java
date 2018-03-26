@@ -3,7 +3,7 @@ package com.ingdan.eventcalendar.api;
 
 import com.ingdan.eventcalendar.config.URLS;
 import com.ingdan.base.common.model.BaseBean;
-import com.ingdan.eventcalendar.model.bean.WeatherBean;
+import com.ingdan.eventcalendar.model.bean.weather.WeatherBean;
 
 import java.util.Map;
 

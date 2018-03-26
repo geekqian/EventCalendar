@@ -2,8 +2,8 @@ package com.ingdan.eventcalendar.presenter;
 
 import com.ingdan.base.common.base.presenter.BasePresenter;
 import com.ingdan.base.common.base.view.IView;
-import com.ingdan.eventcalendar.model.bean.WeatherBean;
-import com.ingdan.eventcalendar.model.model.WeatherModel;
+import com.ingdan.eventcalendar.model.bean.weather.WeatherBean;
+import com.ingdan.eventcalendar.model.model.weather.WeatherModel;
 
 import java.util.HashMap;
 

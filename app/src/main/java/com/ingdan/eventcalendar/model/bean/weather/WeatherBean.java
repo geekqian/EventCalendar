@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.model.bean;
+package com.ingdan.eventcalendar.model.bean.weather;
 
 import java.util.List;
 
@@ -21,11 +21,11 @@ public class WeatherBean {
      * wendu : 23
      */
 
-    private YesterdayBean      yesterday;
-    private String             city;
-    private String             aqi;
-    private String             ganmao;
-    private String             wendu;
+    private YesterdayBean yesterday;
+    private String city;
+    private String aqi;
+    private String ganmao;
+    private String wendu;
     private List<ForecastBean> forecast;
 
     public YesterdayBean getYesterday() {
