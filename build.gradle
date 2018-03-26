@@ -32,4 +32,17 @@ ext {
     supportVersion = '27.1.0'
     //黄油刀依赖版本号
     butterknifeVersion = '8.8.1'
+    //OKHTTP版本号
+    okhttpVersion = '3.8.1'
+    okioVersion = '1.13.0'
+    loggingInterceptorVersion = '3.8.1'
+    //gson版本号
+    gsonVerion = '2.8.1'
+    //retrofit2版本号
+    retrofitVersion = '2.3.0'
+    //rxJava版本号
+    rxjavaVersion = '2.1.9'
+    //rxandroid版本号
+    rxandroidVersion = '2.0.2'
+
 }
