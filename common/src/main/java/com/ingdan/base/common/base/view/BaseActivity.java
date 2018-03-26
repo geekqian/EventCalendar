@@ -1,12 +1,12 @@
-package com.ingdan.base.common.base;
+package com.ingdan.base.common.base.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
+import com.ingdan.base.common.base.BaseFragment;
 import com.ingdan.base.common.base.presenter.IPresenter;
-import com.ingdan.base.common.base.view.IView;
 
 import java.util.List;
 

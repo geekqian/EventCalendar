@@ -2,7 +2,7 @@ package com.ingdan.eventcalendar;
 
 import android.widget.TextView;
 
-import com.ingdan.base.common.base.BaseActivity;
+import com.ingdan.base.common.base.view.BaseActivity;
 import com.ingdan.base.common.utils.LocationUtils;
 import com.ingdan.eventcalendar.model.bean.WeatherBean;
 import com.ingdan.eventcalendar.presenter.MainPresenter;
