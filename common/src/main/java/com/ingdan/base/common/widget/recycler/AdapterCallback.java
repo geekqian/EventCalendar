@@ -1,4 +1,4 @@
-package com.ingdan.base.common.widget;
+package com.ingdan.base.common.widget.recycler;
 
 /**
  * Created by geekDavid

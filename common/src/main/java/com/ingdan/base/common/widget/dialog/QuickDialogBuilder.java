@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.ui.base.dialog;
+package com.ingdan.base.common.widget.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,7 +9,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ingdan.eventcalendar.R;
+import com.ingdan.base.common.R;
+
 
 /**
  * Dialog的控制类
@@ -201,7 +202,7 @@ public class QuickDialogBuilder {
 
         public AlertParams(Context context) {
             DisplayMetrics dm = context.getResources().getDisplayMetrics();
-            mWidth =dm.widthPixels;
+            mWidth = dm.widthPixels;
         }
 
         public void setText(int viewId, CharSequence text) {

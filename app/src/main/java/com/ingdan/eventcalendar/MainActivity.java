@@ -10,7 +10,6 @@ import com.ingdan.eventcalendar.presenter.MainPresenter;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity<WeatherBean> {
@@ -29,8 +28,10 @@ public class MainActivity extends BaseActivity<WeatherBean> {
     @Override
     protected void initData() {
         super.initData();
+        loading();
         mPresenter = new MainPresenter(this);
         getLocation();
+        mPresenter.requestData(mCity);
     }
 
     /**
@@ -41,14 +42,9 @@ public class MainActivity extends BaseActivity<WeatherBean> {
         LocationUtils.getLocation();
     }
 
-    @OnClick(R.id.bt_getData)
-    public void getWeather() {
-        //请求天气数据
-        mPresenter.requestData(mCity);
-    }
-
     @Override
     public void notifycationDataSetChange(WeatherBean weatherBean) {
+        unLoading();
         // 城市
         String city = weatherBean.getCity();
         // 温度

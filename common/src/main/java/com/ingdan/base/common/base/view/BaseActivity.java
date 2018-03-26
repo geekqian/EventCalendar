@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.ingdan.base.common.base.BaseFragment;
 import com.ingdan.base.common.base.presenter.IPresenter;
+import com.ingdan.base.common.widget.dialog.LoadingDialog;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public abstract class BaseActivity<Data> extends AppCompatActivity implements IV
      */
     protected Unbinder mUnbinder;
     protected IPresenter<Data> mPresenter;
+    private LoadingDialog loadingDialog;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -81,7 +83,21 @@ public abstract class BaseActivity<Data> extends AppCompatActivity implements IV
      * 初始化窗体
      */
     protected void initWindow() {
+        loadingDialog = new LoadingDialog(this);
+    }
 
+    /**
+     * 显示加载dialog
+     */
+    protected void loading() {
+        loadingDialog.show();
+    }
+
+    /**
+     * 隐藏加载dialog
+     */
+    protected void unLoading() {
+        loadingDialog.dismiss();
     }
 
     @Override

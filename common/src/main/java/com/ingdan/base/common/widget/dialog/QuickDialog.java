@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.ui.base.dialog;
+package com.ingdan.base.common.widget.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.ingdan.eventcalendar.ui.base.popup.ViewHelper;
+import com.ingdan.base.common.widget.base.ViewHelper;
 
 
 /**

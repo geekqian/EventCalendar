@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.ui.base;
+package com.ingdan.base.common.widget.base;
 
 import android.app.Activity;
 import android.view.View;
@@ -19,21 +19,22 @@ public abstract class ViewHolder {
 
     public ViewHolder(Activity activity, ViewGroup parent) {
         this.mActivity = activity;
-        this.mParent=parent;
+        this.mParent = parent;
         mRootView = convertView();
-        mBinder = ButterKnife.bind(this,mRootView);
+        mBinder = ButterKnife.bind(this, mRootView);
         initView(mRootView);
     }
 
     protected abstract void initView(View view);
 
-    protected <T extends View> T findViewById(int id){
+    protected <T extends View> T findViewById(int id) {
         return mRootView.findViewById(id);
     }
 
     public ViewHolder(Activity activity) {
-        this(activity,null);
+        this(activity, null);
     }
+
     /**
      * 对View进行处理
      */

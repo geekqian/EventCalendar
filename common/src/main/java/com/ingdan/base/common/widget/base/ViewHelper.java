@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.ui.base.popup;
+package com.ingdan.base.common.widget.base;
 
 import android.content.Context;
 import android.util.SparseArray;
