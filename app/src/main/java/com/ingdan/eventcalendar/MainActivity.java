@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 import com.ingdan.base.common.base.BaseActivity;
 import com.ingdan.base.common.utils.LocationUtils;
-import com.ingdan.eventcalendar.model.WeatherBean;
+import com.ingdan.eventcalendar.model.bean.WeatherBean;
 import com.ingdan.eventcalendar.presenter.MainPresenter;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity<WeatherBean> {
 
 
     @BindView(R.id.tv_weather)
@@ -42,14 +42,13 @@ public class MainActivity extends BaseActivity {
     }
 
     @OnClick(R.id.bt_getData)
-    public void getWeather(){
-        mPresenter.getWeather(mCity);
+    public void getWeather() {
+        //请求天气数据
+        mPresenter.requestData(mCity);
     }
 
-    /**
-     * 展示天气数据
-     */
-    public void showWeather(WeatherBean weatherBean){
+    @Override
+    public void notifycationDataSetChange(WeatherBean weatherBean) {
         // 城市
         String city = weatherBean.getCity();
         // 温度

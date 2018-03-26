@@ -4,7 +4,7 @@ import com.ingdan.base.common.base.BaseApiService;
 import com.ingdan.base.common.api.HttpResultFunc;
 import com.ingdan.base.common.api.SchedulersTransformer;
 import com.ingdan.eventcalendar.config.URLS;
-import com.ingdan.eventcalendar.model.WeatherBean;
+import com.ingdan.eventcalendar.model.bean.WeatherBean;
 
 import java.util.Map;
 

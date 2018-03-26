@@ -1,4 +1,4 @@
-package com.ingdan.eventcalendar.model;
+package com.ingdan.eventcalendar.model.bean;
 
 import java.util.List;
 

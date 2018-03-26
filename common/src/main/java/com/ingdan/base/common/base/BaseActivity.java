@@ -5,6 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
+import com.ingdan.base.common.base.presenter.IPresenter;
+import com.ingdan.base.common.base.view.IView;
+
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -17,12 +20,13 @@ import butterknife.Unbinder;
  * 创建时间：2018/03/02
  * 更新时间：
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<Data> extends AppCompatActivity implements IView<Data> {
 
     /**
      * 描述：ButterKnife 绑定对象，可用于解绑
      */
     protected Unbinder mUnbinder;
+    protected IPresenter<Data> mPresenter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -80,6 +84,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void notifycationDataSetChange(Data data) {
+        //TODO:通知数据更新方法空实现具体子类自己实现
+    }
+
     /**
      * 点击顶部返回键
      *
@@ -89,6 +98,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         finish();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 
     /**

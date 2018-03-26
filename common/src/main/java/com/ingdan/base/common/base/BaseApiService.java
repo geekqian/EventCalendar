@@ -59,12 +59,16 @@ public abstract class BaseApiService<T> {
         mApiInterface = mRetrofit.create(setApiClass());
     }
 
-    /** 提供给子类设置接口类
+    /**
+     * 提供给子类设置接口类
+     *
      * @return 接口类 如 ApiInterface.class
      */
     public abstract Class<T> setApiClass();
 
-    /** 提供给子类设置接口根地址
+    /**
+     * 提供给子类设置接口根地址
+     *
      * @return 接口根地址, 一般为 服务器ip地址 或 域名
      */
     public abstract String setApiRootUrl();

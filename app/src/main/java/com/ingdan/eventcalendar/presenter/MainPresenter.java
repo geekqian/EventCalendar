@@ -1,53 +1,41 @@
 package com.ingdan.eventcalendar.presenter;
 
-import com.ingdan.eventcalendar.MainActivity;
-import com.ingdan.eventcalendar.api.ApiService;
-import com.ingdan.base.common.api.HttpObserver;
-import com.ingdan.eventcalendar.model.WeatherBean;
+import com.ingdan.base.common.base.presenter.BasePresenter;
+import com.ingdan.base.common.base.view.IView;
+import com.ingdan.eventcalendar.model.bean.WeatherBean;
+import com.ingdan.eventcalendar.model.model.WeatherModel;
 
 import java.util.HashMap;
 
-import io.reactivex.disposables.Disposable;
-
 /**
  * Created by geekqian on 2018/3/19.
- * 描述:
+ * 描述: 主类Presenter
  * 更新者:
  * 更新时间:
  * 更新描述:
  */
 
-public class MainPresenter{
+public class MainPresenter extends BasePresenter<WeatherBean> {
 
-    private MainActivity mActivity;
 
-    public MainPresenter(MainActivity activity) {
-        mActivity = activity;
+    public MainPresenter(IView IView) {
+        super(IView);
+        IModel = new WeatherModel(this);
     }
 
-    /**
-     * 获取天气数据
-     * @param city 传入城市
-     */
-    public void getWeather(String city){
+    @Override
+    public void requestData(String param) {
+        super.requestData(param);
         HashMap<String, String> map = new HashMap<>();
-        map.put("city", city);
+        map.put("city", param);
+        //向model层请求View层需要的数据
+        IModel.request(map);
+    }
 
-        ApiService.getApiService().getWeather(new HttpObserver<WeatherBean>() {
-            @Override
-            public void onSuccess(WeatherBean weatherBean) {
-                mActivity.showWeather(weatherBean);
-            }
-
-            @Override
-            public void onFinished() {
-
-            }
-
-            @Override
-            public void getDisposable(Disposable disposable) {
-
-            }
-        }, map);
+    @Override
+    public void responseData(WeatherBean weatherBean) {
+        super.responseData(weatherBean);
+        //通知View更新
+        IView.notifycationDataSetChange(weatherBean);
     }
 }
