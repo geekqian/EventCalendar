@@ -16,7 +16,7 @@ public interface IModel<Data> {
      *
      * @param params 参数集合
      */
-    void request(Map<String, String> params);
+    void request(Map<String, String> params, DataCallback<Data> callback);
 
     /**
      * 销毁方法，防止内存泄漏

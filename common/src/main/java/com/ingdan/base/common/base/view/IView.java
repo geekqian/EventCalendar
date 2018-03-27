@@ -9,6 +9,17 @@ package com.ingdan.base.common.base.view;
  */
 
 public interface IView<Data> {
+
+    /**
+     * 显示正在加载进度框
+     */
+    void showLoading();
+
+    /**
+     * 隐藏正在加载进度框
+     */
+    void hideLoading();
+
     /**
      * 通知数据更新
      *

@@ -43,7 +43,6 @@ public class MainActivity extends BaseActivity<WeatherBean> {
     @Override
     protected void initData() {
         super.initData();
-        loading();
         mPresenter = new MainPresenter(this);
         getLocation();
         mPresenter.requestData(mCity);
@@ -59,7 +58,6 @@ public class MainActivity extends BaseActivity<WeatherBean> {
 
     @Override
     public void notifycationDataSetChange(WeatherBean weatherBean) {
-        unLoading();
         // 城市
         String city = weatherBean.getCity();
         // 温度
@@ -76,54 +74,58 @@ public class MainActivity extends BaseActivity<WeatherBean> {
         List<WeatherBean.ForecastBean> forecast = weatherBean.getForecast();
         // 空气质量指数
         String aqi = weatherBean.getAqi();
-
+        //设置时间
         tvWeatherTime.setText(date);
+        //设置天气
         tvWeatherWeather.setText(type);
+        //设置城市
         tvWeatherCity.setText(city);
+        //设置温度
         tvWeatherTemp.setText(String.format(getString(R.string.weather_temp), wendu));
 
+        //根据不同天气设置不同的天气图标与背景
         switch (type) {
-            case WeatherModel.W_QING:
+            case WeatherModel.W_QING://晴
                 imageWeather.setImageResource(R.drawable.ic_white_qing);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue));
                 break;
-            case WeatherModel.W_DUOYUN:
+            case WeatherModel.W_DUOYUN://多云
                 imageWeather.setImageResource(R.drawable.ic_white_duoyun);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue));
                 break;
-            case WeatherModel.W_YIN:
+            case WeatherModel.W_YIN://阴
                 imageWeather.setImageResource(R.drawable.ic_white_yin);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_gray));
                 break;
-            case WeatherModel.W_XIAOYU:
+            case WeatherModel.W_XIAOYU://小雨
                 imageWeather.setImageResource(R.drawable.ic_white_xiaoyu);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_gray));
                 break;
-            case WeatherModel.W_DAYU:
+            case WeatherModel.W_DAYU://大雨
                 imageWeather.setImageResource(R.drawable.ic_white_dayu);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_gray));
                 break;
-            case WeatherModel.W_ZHONGYU:
+            case WeatherModel.W_ZHONGYU://中雨
                 imageWeather.setImageResource(R.drawable.ic_white_zhongyu);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_gray));
                 break;
-            case WeatherModel.W_LEIZHENYU:
+            case WeatherModel.W_LEIZHENYU://雷阵雨
                 imageWeather.setImageResource(R.drawable.ic_white_leizhenyu);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_gray));
                 break;
-            case WeatherModel.W_XIAOXUE:
+            case WeatherModel.W_XIAOXUE://小雪
                 imageWeather.setImageResource(R.drawable.ic_white_xiaoxue);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue_green));
                 break;
-            case WeatherModel.W_DAXUE:
+            case WeatherModel.W_DAXUE://大雪
                 imageWeather.setImageResource(R.drawable.ic_black_daxue);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue_green));
                 break;
-            case WeatherModel.W_ZHONGXUE:
+            case WeatherModel.W_ZHONGXUE://中雪
                 imageWeather.setImageResource(R.drawable.ic_white_zhongxue);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue_green));
                 break;
-            case WeatherModel.W_WU:
+            case WeatherModel.W_WU://雾
                 imageWeather.setImageResource(R.drawable.ic_white_wu);
                 topWeatherLayout.setBackground(getResources().getDrawable(R.drawable.shape_gradual_blue_green));
                 break;

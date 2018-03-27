@@ -89,16 +89,18 @@ public abstract class BaseActivity<Data> extends AppCompatActivity implements IV
     /**
      * 显示加载dialog
      */
-    protected void loading() {
+    @Override
+    public void showLoading() {
         loadingDialog.show();
     }
-
     /**
      * 隐藏加载dialog
      */
-    protected void unLoading() {
+    @Override
+    public void hideLoading() {
         loadingDialog.dismiss();
     }
+
 
     @Override
     public void notifycationDataSetChange(Data data) {

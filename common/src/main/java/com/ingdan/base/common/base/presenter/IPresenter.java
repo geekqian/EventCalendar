@@ -27,6 +27,7 @@ public interface IPresenter<Data> {
      */
     void responseData(Data data);
 
+
     /**
      * 销毁方法，防止内存泄漏
      */

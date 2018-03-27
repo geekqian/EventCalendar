@@ -21,7 +21,7 @@ public abstract class BaseModel<Data> implements IModel<Data> {
     }
 
     @Override
-    public void request(Map params) {
+    public void request(Map<String, String> params, DataCallback<Data> callback) {
         //TODO:request方法空实现
     }
 

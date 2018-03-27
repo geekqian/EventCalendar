@@ -2,6 +2,7 @@ package com.ingdan.eventcalendar.model.model.weather;
 
 import com.ingdan.base.common.api.HttpObserver;
 import com.ingdan.base.common.base.model.BaseModel;
+import com.ingdan.base.common.base.model.DataCallback;
 import com.ingdan.base.common.base.presenter.IPresenter;
 import com.ingdan.eventcalendar.api.ApiService;
 import com.ingdan.eventcalendar.model.bean.weather.WeatherBean;
@@ -37,25 +38,30 @@ public class WeatherModel extends BaseModel<WeatherBean> {
     }
 
     @Override
-    public void request(Map params) {
+    public void request(Map<String, String> params, DataCallback<WeatherBean> callback) {
+        super.request(params, callback);
         //获取天气数据
         ApiService.getApiService().getWeather(new HttpObserver<WeatherBean>() {
             @Override
             public void onSuccess(WeatherBean weatherBean) {
-                //相应数据
-                mPresenter.responseData(weatherBean);
+                if (callback != null) {
+                    callback.onSuccess(weatherBean);
+                }
             }
 
             @Override
             public void onFinished() {
-
+                if (callback != null) {
+                    callback.onFinished();
+                }
             }
 
             @Override
             public void getDisposable(Disposable disposable) {
-
+                if (callback != null) {
+                    callback.getDisposable(disposable);
+                }
             }
         }, params);
     }
-
 }
