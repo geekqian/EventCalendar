@@ -119,7 +119,7 @@ public abstract class BaseActivity<Data> extends AppCompatActivity implements IV
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
+        mPresenter.onDestory();
     }
 
     /**
