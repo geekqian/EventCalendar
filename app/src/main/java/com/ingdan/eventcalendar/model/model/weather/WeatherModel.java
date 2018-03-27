@@ -20,6 +20,18 @@ import io.reactivex.disposables.Disposable;
 
 public class WeatherModel extends BaseModel<WeatherBean> {
 
+    public static final String W_QING = "晴";
+    public static final String W_YIN = "阴";
+    public static final String W_XIAOYU = "小雨";
+    public static final String W_XIAOXUE = "小雪";
+    public static final String W_DAXUE = "大雪";
+    public static final String W_DAYU = "大雨";
+    public static final String W_ZHONGYU = "中雨";
+    public static final String W_ZHONGXUE = "中雪";
+    public static final String W_WU = "雾";
+    public static final String W_DUOYUN = "多云";
+    public static final String W_LEIZHENYU = "雷阵雨";
+
     public WeatherModel(IPresenter<WeatherBean> presenter) {
         super(presenter);
     }

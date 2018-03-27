@@ -5,10 +5,71 @@
     android:layout_height="match_parent"
     tools:context="com.ingdan.eventcalendar.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_weather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="change Github Name test" />
+    <RelativeLayout
+        android:id="@+id/topWeatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_gradual_red">
+
+        <TextView
+            android:id="@+id/tv_weather_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="11:30"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_weather_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/tv_weather_time"
+            android:text="晴"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_weather_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_weather_time"
+            android:layout_marginStart="15dp"
+            android:text="深圳"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_weather_time"
+            android:layout_toEndOf="@+id/tv_weather_city"
+            android:text="19℃"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_weather_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_weather_temp"
+            android:layout_marginStart="15dp"
+            android:text="2018年3月27日"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/image_weather"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_white_zhongyu" />
+    </RelativeLayout>
+
 
 </RelativeLayout>

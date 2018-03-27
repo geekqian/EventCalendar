@@ -4,6 +4,20 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="white">#ffffff</color>
+    <!--黑色透明-->
+    <color name="c_black80">#80000000</color>
+    <!--渐变红-->
+    <color name="cfccf31">#fccf31</color>
+    <color name="cf55555">#f55555</color>
+    <!--渐变蓝-->
+    <color name="cabcdcff">#abdcff</color>
+    <color name="c0396ff">#0396ff</color>
+    <!--渐变蓝绿-->
+    <color name="c90f7ea">#90f7ea</color>
+    <color name="c32ccbc">#32ccbc</color>
+    <!--渐变灰-->
+    <color name="c455a64">#455a64</color>
+    <color name="c546e7a">#546e7a</color>
 
-    <color name="black80">#80000000</color>
 </resources>
