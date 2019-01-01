@@ -23,6 +23,7 @@ public class RequestInterceptor implements Interceptor {
         Request.Builder requestBuilder = original
                 .newBuilder()
                 .addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+//                .addHeader("Connection", "close");
         //设置cookie
         //        String cookie= App.getCookie();
         //        if (StringUtil.checkStr(cookie)) {             //cookie判空检查

@@ -1,15 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
 android {
-    compileSdkVersion 27
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -29,22 +27,21 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //suppprt依赖
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
     //butterKnife依赖
-    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    api "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     //okhttp
-    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
-    api "com.squareup.okio:okio:$rootProject.ext.okioVersion"
-    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptorVersion"
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp"
+    api "com.squareup.okio:okio:$rootProject.ext.okio"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptor"
     //gson
-    api "com.google.code.gson:gson:$rootProject.ext.gsonVerion"
+    api "com.google.code.gson:gson:$rootProject.ext.gson"
     //retrofit2
-    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
-    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
-    api "com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofitVersion"
-    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit"
+    api "com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofit"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofit"
     //rxJava
-    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
-    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroid"
 }
