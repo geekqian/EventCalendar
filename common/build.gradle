@@ -26,7 +26,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //suppprt依赖
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    api "$rootProject.ext.recyclerviewV7"
     //butterKnife依赖
     api "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
